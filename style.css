@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,html{
+    color: #fff;
+background: #4146BF;
+
+}
+
+#wrapper{
+    min-width: 100vh;
+    overflow: hidden;
+}
+#countDown,
+#welcome{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    opacity: 1;
+}
+
+.container{
+    animation: fadeIn 500ms;
+}
+h1.message{
+    text-align: center;
+    margin: 30px 0px;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+#timer{
+    max-width: 900px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0px 20px;
+}
+#timer>div{
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#timer>div>h2{
+     font-size: 4em;
+     font-weight: 700;
+}
+#timer>div>p{
+    font-weight: 300;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#welcome{
+    opacity: 0;
+
+}
+#welcome img{
+    margin: 0px auto;
+}
+.fadeInUp{
+    animation: fadeInUp 1000ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translate3d(0,100%,0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
